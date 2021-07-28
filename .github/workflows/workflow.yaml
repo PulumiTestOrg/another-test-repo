@@ -6,9 +6,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.event.organisation.name }}
       - run: echo ${{ github.event.organization.name }}
-      - run: echo ${{ github.event.organization }}
+      - run: echo ${{ github.event.organization.company }}
+      - run: echo ${{ github.event.organization.description }}
+      - run: echo ${{ github.event.organization.id }}
+      - run: echo ${{ github.event.organization.org }}
+      - run: echo ${{ github.event.organization.url }}
+      - run: echo ${{ github.event.organization.location }}
       - run: echo ${{ github.event.repository.name }}
 
 
