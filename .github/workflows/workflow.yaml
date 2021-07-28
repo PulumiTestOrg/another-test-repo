@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-     ORG: ${{ github.event.organization.location | cut -c29 }}
+     ORG: ${${{ github.event.organization.location }} | cut -c29}
     steps:
       - run: echo ${{ github.event.workspace }}
       - run: echo ${{ github.event.organization.org }}
