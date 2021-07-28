@@ -6,5 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo {{ github.organisation.name }}
- 
+      - run: echo ${{ github.organisation.name }}
+      - run: echo ${{ github.organization.name }}
+      - run: echo ${{ github.organization }}
+      - run: echo ${{ github.repository.name }}
+
+
